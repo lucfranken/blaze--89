@@ -1,0 +1,23 @@
+<head>
+  <title>blazeDemo</title>
+</head>
+
+<body>
+  <h1>Loop in loop example</h1>
+
+  {{> users}}
+</body>
+
+<template name="users">
+  <ul>
+    {{#each users}}
+      {{> user}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="user">
+  <li>
+    {{name}}: {{age}}
+  </li>
+</template>
